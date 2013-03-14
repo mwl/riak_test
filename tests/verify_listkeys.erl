@@ -35,7 +35,7 @@ confirm() ->
     lager:info("Writing some known data to Node 1"),
     put_keys(Node1, ?BUCKET, ?NUM_KEYS),
     put_buckets(Node1, ?NUM_BUCKETS),
-    timer:sleep(2000),
+    timer:sleep(4000),
     check_it_all([Node1]),
 
     lists:foldl(fun(Node, [N1|_] = Cluster) ->
